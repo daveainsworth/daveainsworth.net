@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+canvas {
+  background: #f0f0f0;
+  display: block;
+  border-radius: 5px;
+}
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 20px;
+  background: #222;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover {
+  background: #888;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.rules-btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.rules {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  color: #fff;
+  min-height: 100vh;
+  width: 400px;
+  padding: 20px;
+  line-height: 1.5;
+  transform: translateX(-400px);
+  transition: transform 1s ease-in-out;
+}
+
+.rules.show {
+  transform: translateX(0px);
+}
+
+.score-bar {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: red;
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+}
+
+.scores {
+  font-size: 2rem;
+  color: #fff;
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+}
+
+.splash-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+}
+
+.splash-screen img {
+  height: 100%;
+  padding: 5px;
+}
+
+.splash-screen.hide {
+  transform: translateX(-2400px);
+  transition: transform 1s ease-out;
+}
+
+.splash-screen-btn:focus {
+  outline: 0;
+}
+
+.splash-screen-btn:hover {
+  background: rgba(0, 32, 214, 0.8);
+}
+
+.splash-screen-btn:active {
+  transform: scale(0.98);
+}
+
+.splash-screen-btn {
+  position: absolute;
+  background-color: rgb(0, 32, 214);
+  width: 200px;
+  bottom: 360px;
+  z-index: 5;
+  box-shadow: -5px -5px 30px 5px red, 5px 5px 30px 5px blue;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+      }
+
+  .splash-screen img {
+    width: 450px;
+
+    padding: 5px;
+  }
+}

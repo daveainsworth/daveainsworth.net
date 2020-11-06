@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  padding-top: 8vh;
+  padding-left: 1rem;
+}
+
+.background {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  BIO Section */
+
+.bio {
+  background-image: linear-gradient(
+      rgba(56, 70, 77, 0.75),
+      rgba(56, 70, 77, 0.75)
+    ),
+    url("../img/bio.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  color: rgb(182, 182, 182);
+  font-size: 1.4rem;
+}
+
+.img-round {
+  border-radius: 130px;
+}
+
+.bio .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio p {
+  width: 70%;
+  
+}
+
+/*  Computer Section */
+.computer-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.computer-showcase .card {
+  width: 25%;
+}
+
+.computer-showcase img {
+  border-radius: 5px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.computer-showcase h4 {
+  padding: 3px;
+  margin: 3px;
+}
+
+.computer-showcase p {
+  padding: 5px 2px;
+  margin: 3px;
+  height: 100px;
+}
+
+
+/* RETRO SEction */
+.retro {
+  background-image: linear-gradient(
+      rgba(56, 70, 77, 0.75),
+      rgba(56, 70, 77, 0.75)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  width: 100%;
+  color: #fff;
+}
+
+.retro-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.retro-showcase .card {
+  background: #bebebe;
+  width: 23%;
+  box-shadow: 5px 10px 5px rgba(0,0,0,0.5);
+  margin: 10px 10px;
+}
+
+.retro-showcase img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding-top: 10px;
+}
+
+.retro .container {
+  text-align: center;
+}
+
+.retro .container a {
+  color: rgb(226, 226, 226);
+}
+
+/* Socials Section */
+.social-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.social-showcase img {
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.12);
+}
+
+
+/* ** NAV Section START */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #6e7594;
+  /* background-color: #5d4954; */
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 5;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.logo {
+  color: rgb(226, 226, 226);
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.nav-links a:hover {
+  color: #fff;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* ** NAV Section END  */
+
+/*  ** MEDIA QUERIES  - Responsiveness - START  */
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #51566b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .logo img {
+    height: 20px;
+    width: auto;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+
+  .bio-showcase {
+    font-size: 1rem;
+  }
+
+  .bio-showcase img {
+    width: 150px;
+  }
+
+  .bio-showcase p {
+    width: 100%;
+  }
+
+  .computer-showcase h4 {
+    font-size: 10px;
+    width: 100%;
+  }
+
+  .computer-showcase p {
+    font-size: 10px;
+    width: 100%;
+  }
+
+  .retro-showcase .card {
+    width: 80%;
+    border-radius: 10px;
+  }
+  
+  .retro-showcase img {
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 200px;
+  }
+
+  .retro-showcase p {
+    width: 90%;
+    padding-left: 2px;
+  }
+  
+
+  .social-showcase img {
+    width: 100px;
+    border-radius: 5px;
+  }
+  
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* change burger to three lines vertial */
+.toggle .line1 {
+  transform: rotate(90deg) translate(8px, 9px);
+}
+.toggle .line2 {
+  transform: rotate(90deg) translate(0px, 0px);
+}
+.toggle .line3 {
+  transform: rotate(90deg) translate(-8px, -9px);
+}
+
+/*  ** MEDIA QUERIES  - Responsiveness - END  */
+
+/* **  Change for Dark Mode - START  */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #303030;
+    color: rgb(190, 190, 190);
+  }
+
+  .logo {
+    color: rgb(190, 190, 190);
+  }
+
+  .nav-links a {
+    color: rgb(190, 190, 190);
+  }
+
+  .burger div {
+    background-color: rgb(190, 190, 190);
+  }
+
+  img {
+    opacity: 0.75;
+    transition: opacity 0.5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
+  }
+
+  .retro-showcase .card {
+    background: #444444;
+  }
+}
+
+/* **  Change for Dark Mode - END  */
